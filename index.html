@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Luxora Estates — Exceptional luxury properties for extraordinary lifestyles. Discover exclusive homes, villas and estates worldwide." />
+  <meta name="theme-color" content="#0B0B0B" />
+  <meta property="og:title" content="Luxora Estates | Luxury Real Estate" />
+  <meta property="og:description" content="Exceptional luxury properties designed for extraordinary lifestyles." />
+  <meta property="og:type" content="website" />
+  <title>Luxora Estates | Luxury Real Estate Agency</title>
+  <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" />
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="header" id="header">
+    <div class="container nav-container">
+      <a href="#home" class="logo">LUXORA<span>.</span></a>
+      <nav class="nav" id="nav">
+        <ul class="nav-list">
+          <li><a href="#home" class="nav-link">Home</a></li>
+          <li><a href="#properties" class="nav-link">Properties</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#services" class="nav-link">Services</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+      <a href="#contact" class="btn btn-gold btn-sm nav-cta">Schedule Visit</a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="hero-bg">
+      <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=1920&q=80"
+        alt="Luxury modern villa at sunset" loading="eager" />
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="container hero-content">
+      <span class="eyebrow reveal">Luxora Estates — Established 2010</span>
+      <h1 class="hero-title reveal">Find Your Dream <em>Luxury</em> Home</h1>
+      <p class="hero-sub reveal">Exceptional properties designed for extraordinary lifestyles.</p>
+      <div class="hero-actions reveal">
+        <a href="#properties" class="btn btn-gold">Explore Properties</a>
+        <a href="#contact" class="btn btn-ghost">Contact Agent</a>
+      </div>
+    </div>
+    <div class="hero-stats">
+      <div class="stat"><span class="counter" data-target="500">0</span><small>+ Properties Sold</small></div>
+      <div class="stat"><span class="counter" data-target="15">0</span><small>+ Years Experience</small></div>
+      <div class="stat"><span class="counter" data-target="98">0</span><small>% Happy Clients</small></div>
+    </div>
+  </section>
+
+  <!-- SEARCH -->
+  <section class="search-section">
+    <div class="container">
+      <form class="search-bar" id="searchBar" onsubmit="return false;">
+        <div class="search-field">
+          <label>Location</label>
+          <select>
+            <option>Any Location</option>
+            <option>Miami, FL</option>
+            <option>Los Angeles, CA</option>
+            <option>New York, NY</option>
+            <option>Aspen, CO</option>
+            <option>Monaco</option>
+          </select>
+        </div>
+        <div class="search-field">
+          <label>Property Type</label>
+          <select>
+            <option>Any Type</option>
+            <option>Villa</option>
+            <option>Penthouse</option>
+            <option>Estate</option>
+            <option>Chalet</option>
+          </select>
+        </div>
+        <div class="search-field">
+          <label>Price Range</label>
+          <select>
+            <option>Any Price</option>
+            <option>$1M – $3M</option>
+            <option>$3M – $6M</option>
+            <option>$6M – $10M</option>
+            <option>$10M+</option>
+          </select>
+        </div>
+        <div class="search-field">
+          <label>Bedrooms</label>
+          <select>
+            <option>Any</option>
+            <option>2+</option>
+            <option>3+</option>
+            <option>4+</option>
+            <option>5+</option>
+          </select>
+        </div>
+        <button type="submit" class="btn btn-gold search-btn">Search</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- FEATURED PROPERTIES -->
+  <section class="section" id="properties">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Featured Portfolio</span>
+        <h2 class="section-title">Curated Luxury <em>Residences</em></h2>
+        <p class="section-sub">A handpicked selection of the world's most extraordinary homes.</p>
+      </div>
+
+      <div class="filters reveal">
+        <button class="filter active" data-filter="all">All</button>
+        <button class="filter" data-filter="villa">Villas</button>
+        <button class="filter" data-filter="penthouse">Penthouses</button>
+        <button class="filter" data-filter="estate">Estates</button>
+        <button class="filter" data-filter="chalet">Chalets</button>
+      </div>
+
+      <div class="property-grid" id="propertyGrid">
+        <article class="property-card reveal" data-type="villa">
+          <div class="property-media">
+            <img loading="lazy"
+              src="https://images.unsplash.com/photo-1613977257363-707ba9348227?auto=format&fit=crop&w=1200&q=80"
+              alt="Modern Ocean Villa" />
+            <span class="badge">For Sale</span>
+          </div>
+          <div class="property-body">
+            <div class="property-loc">Miami, Florida</div>
+            <h3 class="property-name">Modern Ocean Villa</h3>
+            <div class="property-price">$2,500,000</div>
+            <ul class="property-meta">
+              <li><strong>5</strong> Beds</li>
+              <li><strong>6</strong> Baths</li>
+              <li><strong>620</strong> m²</li>
+            </ul>
+            <a href="#contact" class="btn-link">View Details →</a>
+          </div>
+        </article>
+
+        <article class="property-card reveal" data-type="penthouse">
+          <div class="property-media">
+            <img loading="lazy"
+              src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80"
+              alt="Manhattan Sky Penthouse" />
+            <span class="badge">Exclusive</span>
+          </div>
+          <div class="property-body">
+            <div class="property-loc">New York, NY</div>
+            <h3 class="property-name">Manhattan Sky Penthouse</h3>
+            <div class="property-price">$8,750,000</div>
+            <ul class="property-meta">
+              <li><strong>4</strong> Beds</li>
+              <li><strong>5</strong> Baths</li>
+              <li><strong>480</strong> m²</li>
+            </ul>
+            <a href="#contact" class="btn-link">View Details →</a>
+          </div>
+        </article>
+
+        <article class="property-card reveal" data-type="estate">
+          <div class="property-media">
+            <img loading="lazy"
+              src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1200&q=80"
+              alt="Beverly Hills Estate" />
+            <span class="badge">New</span>
+          </div>
+          <div class="property-body">
+            <div class="property-loc">Beverly Hills, CA</div>
+            <h3 class="property-name">Beverly Hills Estate</h3>
+            <div class="property-price">$12,900,000</div>
+            <ul class="property-meta">
+              <li><strong>7</strong> Beds</li>
+              <li><strong>9</strong> Baths</li>
+              <li><strong>1,120</strong> m²</li>
+            </ul>
+            <a href="#contact" class="btn-link">View Details →</a>
+          </div>
+        </article>
+
+        <article class="property-card reveal" data-type="chalet">
+          <div class="property-media">
+            <img loading="lazy"
+              src="https://images.unsplash.com/photo-1449844908441-8829872d2607?auto=format&fit=crop&w=1200&q=80"
+              alt="Alpine Chalet Retreat" />
+            <span class="badge">For Sale</span>
+          </div>
+          <div class="property-body">
+            <div class="property-loc">Aspen, Colorado</div>
+            <h3 class="property-name">Alpine Chalet Retreat</h3>
+            <div class="property-price">$6,300,000</div>
+            <ul class="property-meta">
+              <li><strong>6</strong> Beds</li>
+              <li><strong>7</strong> Baths</li>
+              <li><strong>780</strong> m²</li>
+            </ul>
+            <a href="#contact" class="btn-link">View Details →</a>
+          </div>
+        </article>
+
+        <article class="property-card reveal" data-type="villa">
+          <div class="property-media">
+            <img loading="lazy"
+              src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1200&q=80"
+              alt="Mediterranean Cliff Villa" />
+            <span class="badge">Featured</span>
+          </div>
+          <div class="property-body">
+            <div class="property-loc">Monaco</div>
+            <h3 class="property-name">Mediterranean Cliff Villa</h3>
+            <div class="property-price">$15,400,000</div>
+            <ul class="property-meta">
+              <li><strong>6</strong> Beds</li>
+              <li><strong>8</strong> Baths</li>
+              <li><strong>950</strong> m²</li>
+            </ul>
+            <a href="#contact" class="btn-link">View Details →</a>
+          </div>
+        </article>
+
+        <article class="property-card reveal" data-type="penthouse">
+          <div class="property-media">
+            <img loading="lazy"
+              src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&w=1200&q=80"
+              alt="Marina Bay Penthouse" />
+            <span class="badge">Exclusive</span>
+          </div>
+          <div class="property-body">
+            <div class="property-loc">Dubai, UAE</div>
+            <h3 class="property-name">Marina Bay Penthouse</h3>
+            <div class="property-price">$9,200,000</div>
+            <ul class="property-meta">
+              <li><strong>4</strong> Beds</li>
+              <li><strong>5</strong> Baths</li>
+              <li><strong>540</strong> m²</li>
+            </ul>
+            <a href="#contact" class="btn-link">View Details →</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="section section-alt" id="about">
+    <div class="container about-grid">
+      <div class="about-media reveal">
+        <img loading="lazy"
+          src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=80"
+          alt="Luxury interior" />
+        <div class="about-badge">
+          <span class="counter" data-target="15">0</span>
+          <small>Years of<br />Excellence</small>
+        </div>
+      </div>
+      <div class="about-content reveal">
+        <span class="eyebrow">About Luxora</span>
+        <h2 class="section-title">A Legacy of <em>Discretion</em> &amp; Distinction</h2>
+        <p>For over fifteen years, Luxora Estates has represented the world's most discerning buyers and sellers. We
+          curate a private portfolio of extraordinary residences — from Mediterranean cliffside villas to
+          skyline-defining penthouses.</p>
+        <ul class="feature-list">
+          <li><span>01</span> 15 Years of luxury market experience</li>
+          <li><span>02</span> Professional, multilingual advisors</li>
+          <li><span>03</span> Exclusive off-market listings</li>
+          <li><span>04</span> International concierge service</li>
+        </ul>
+        <a href="#contact" class="btn btn-gold">Meet the Team</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="section" id="services">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">What We Offer</span>
+        <h2 class="section-title">Bespoke <em>Services</em></h2>
+        <p class="section-sub">Tailored solutions across every facet of luxury real estate.</p>
+      </div>
+      <div class="services-grid">
+        <div class="service-card reveal">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+              <path d="M3 10.5 12 3l9 7.5V21H3z" />
+              <path d="M9 21v-6h6v6" />
+            </svg>
+          </div>
+          <h3>Property Buying</h3>
+          <p>Access exclusive off-market listings and private viewings tailored to your lifestyle.</p>
+        </div>
+        <div class="service-card reveal">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+              <path d="M4 21V10l8-6 8 6v11" />
+              <path d="M9 21v-6h6v6" />
+              <path d="m16 6 4 3" />
+            </svg>
+          </div>
+          <h3>Property Selling</h3>
+          <p>Global marketing, cinematic media, and a network of qualified international buyers.</p>
+        </div>
+        <div class="service-card reveal">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+              <path d="M3 3v18h18" />
+              <path d="m7 15 4-4 3 3 5-6" />
+            </svg>
+          </div>
+          <h3>Investment Consulting</h3>
+          <p>Data-driven guidance on high-yield residential and mixed-use investment opportunities.</p>
+        </div>
+        <div class="service-card reveal">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+              <circle cx="12" cy="12" r="9" />
+              <path d="M12 3a15 15 0 0 1 0 18M12 3a15 15 0 0 0 0 18M3 12h18" />
+            </svg>
+          </div>
+          <h3>Property Management</h3>
+          <p>Discreet, end-to-end care for your residences worldwide — 24/7 concierge support.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section class="section section-alt" id="gallery">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Portfolio Gallery</span>
+        <h2 class="section-title">Inside Our <em>Residences</em></h2>
+      </div>
+      <div class="masonry" id="gallery">
+        <div class="masonry-item"><img loading="lazy"
+            src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=1000&q=80"
+            alt="Interior 1" /></div>
+        <div class="masonry-item tall"><img loading="lazy"
+            src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1000&q=80"
+            alt="Interior 2" /></div>
+        <div class="masonry-item"><img loading="lazy"
+            src="https://images.unsplash.com/photo-1600607687644-c7171b42498f?auto=format&fit=crop&w=1000&q=80"
+            alt="Interior 3" /></div>
+        <div class="masonry-item wide"><img loading="lazy"
+            src="https://images.unsplash.com/photo-1600566753051-6057f2114e3e?auto=format&fit=crop&w=1400&q=80"
+            alt="Interior 4" /></div>
+        <div class="masonry-item"><img loading="lazy"
+            src="https://images.unsplash.com/photo-1600585152220-90363fe7e115?auto=format&fit=crop&w=1000&q=80"
+            alt="Interior 5" /></div>
+        <div class="masonry-item tall"><img loading="lazy"
+            src="https://images.unsplash.com/photo-1600607688969-a5bfcd646154?auto=format&fit=crop&w=1000&q=80"
+            alt="Interior 6" /></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY CHOOSE US -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Why Luxora</span>
+        <h2 class="section-title">A Standard <em>Above</em></h2>
+      </div>
+      <div class="why-grid">
+        <div class="why-card reveal">
+          <div class="why-num"><span class="counter" data-target="100">0</span>%</div>
+          <h4>Security</h4>
+          <p>Verified listings and confidential transactions.</p>
+        </div>
+        <div class="why-card reveal">
+          <div class="why-num"><span class="counter" data-target="24">0</span>/7</div>
+          <h4>Premium Support</h4>
+          <p>Dedicated advisors, wherever you are.</p>
+        </div>
+        <div class="why-card reveal">
+          <div class="why-num"><span class="counter" data-target="30">0</span>+</div>
+          <h4>Market Knowledge</h4>
+          <p>Deep expertise across 30+ global markets.</p>
+        </div>
+        <div class="why-card reveal">
+          <div class="why-num"><span class="counter" data-target="250">0</span>+</div>
+          <h4>Exclusive Listings</h4>
+          <p>Private, off-market opportunities.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="section section-alt" id="testimonials">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Client Voices</span>
+        <h2 class="section-title">Trusted by the <em>Discerning</em></h2>
+      </div>
+      <div class="testimonial-grid">
+        <figure class="testimonial reveal">
+          <div class="stars">★★★★★</div>
+          <blockquote>Luxora delivered an unparalleled experience. Every detail, from the first viewing to closing, was
+            flawless.</blockquote>
+          <figcaption>
+            <img loading="lazy"
+              src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=200&q=80"
+              alt="Isabella Moreau" />
+            <div><strong>Isabella Moreau</strong><span>Paris, France</span></div>
+          </figcaption>
+        </figure>
+        <figure class="testimonial reveal">
+          <div class="stars">★★★★★</div>
+          <blockquote>Their off-market portfolio is simply unmatched. We found our dream home in Monaco within a week.
+          </blockquote>
+          <figcaption>
+            <img loading="lazy"
+              src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&q=80"
+              alt="James Whitmore" />
+            <div><strong>James Whitmore</strong><span>London, UK</span></div>
+          </figcaption>
+        </figure>
+        <figure class="testimonial reveal">
+          <div class="stars">★★★★★</div>
+          <blockquote>Discreet, professional and truly world-class. The gold standard in luxury real estate.
+          </blockquote>
+          <figcaption>
+            <img loading="lazy"
+              src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=200&q=80"
+              alt="Sofia Alvarez" />
+            <div><strong>Sofia Alvarez</strong><span>Madrid, Spain</span></div>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- AGENTS -->
+  <section class="section" id="agents">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Our Advisors</span>
+        <h2 class="section-title">Meet the <em>Team</em></h2>
+      </div>
+      <div class="agents-grid">
+        <div class="agent-card reveal">
+          <div class="agent-photo"><img loading="lazy"
+              src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=800&q=80"
+              alt="Alexander Reed" /></div>
+          <h4>Alexander Reed</h4>
+          <p>Senior Partner</p>
+          <div class="agent-socials"><a href="#" aria-label="Instagram">◐</a><a href="#" aria-label="LinkedIn">in</a><a
+              href="#" aria-label="Twitter">✕</a></div>
+          <a href="#contact" class="btn btn-outline btn-sm">Contact</a>
+        </div>
+        <div class="agent-card reveal">
+          <div class="agent-photo"><img loading="lazy"
+              src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80"
+              alt="Olivia Bennett" /></div>
+          <h4>Olivia Bennett</h4>
+          <p>Head of International Sales</p>
+          <div class="agent-socials"><a href="#" aria-label="Instagram">◐</a><a href="#" aria-label="LinkedIn">in</a><a
+              href="#" aria-label="Twitter">✕</a></div>
+          <a href="#contact" class="btn btn-outline btn-sm">Contact</a>
+        </div>
+        <div class="agent-card reveal">
+          <div class="agent-photo"><img loading="lazy"
+              src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=800&q=80"
+              alt="Marcus Hale" /></div>
+          <h4>Marcus Hale</h4>
+          <p>Investment Advisor</p>
+          <div class="agent-socials"><a href="#" aria-label="Instagram">◐</a><a href="#" aria-label="LinkedIn">in</a><a
+              href="#" aria-label="Twitter">✕</a></div>
+          <a href="#contact" class="btn btn-outline btn-sm">Contact</a>
+        </div>
+        <div class="agent-card reveal">
+          <div class="agent-photo"><img loading="lazy"
+              src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=800&q=80"
+              alt="Elena Rossi" /></div>
+          <h4>Elena Rossi</h4>
+          <p>Private Client Director</p>
+          <div class="agent-socials"><a href="#" aria-label="Instagram">◐</a><a href="#" aria-label="LinkedIn">in</a><a
+              href="#" aria-label="Twitter">✕</a></div>
+          <a href="#contact" class="btn btn-outline btn-sm">Contact</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section section-alt" id="contact">
+    <div class="container contact-grid">
+      <div class="contact-info reveal">
+        <span class="eyebrow">Get in Touch</span>
+        <h2 class="section-title">Begin Your <em>Journey</em></h2>
+        <p>Speak with a private advisor. All inquiries are treated with the utmost discretion.</p>
+        <ul class="contact-list">
+          <li><strong>Office</strong><span>1200 Ocean Drive, Miami, FL 33139</span></li>
+          <li><strong>Phone</strong><span>+1 (305) 555 — 0199</span></li>
+          <li><strong>Email</strong><span>private@luxoraestates.com</span></li>
+          <li><strong>Hours</strong><span>Mon – Sat · 9:00 – 20:00</span></li>
+        </ul>
+        <div class="map">
+          <iframe title="Luxora Office Map" src="https://www.google.com/maps?q=miami+beach&output=embed" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+      <form class="contact-form reveal" id="contactForm" novalidate>
+        <div class="row">
+          <div class="field"><label>Name</label><input type="text" name="name" required /></div>
+          <div class="field"><label>Email</label><input type="email" name="email" required /></div>
+        </div>
+        <div class="row">
+          <div class="field"><label>Phone</label><input type="tel" name="phone" /></div>
+          <div class="field"><label>Property Interest</label>
+            <select name="interest">
+              <option>Villa</option>
+              <option>Penthouse</option>
+              <option>Estate</option>
+              <option>Chalet</option>
+              <option>Investment</option>
+            </select>
+          </div>
+        </div>
+        <div class="field"><label>Message</label><textarea name="message" rows="5" required></textarea></div>
+        <button type="submit" class="btn btn-gold btn-block">Send Inquiry</button>
+        <p class="form-status" id="formStatus" role="status"></p>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <a href="#home" class="logo logo-footer">LUXORA<span>.</span></a>
+        <p class="footer-about">Curating the world's most extraordinary residences for a discerning international
+          clientele.</p>
+        <div class="socials">
+          <a href="#" aria-label="Instagram">Instagram</a>
+          <a href="#" aria-label="LinkedIn">LinkedIn</a>
+          <a href="#" aria-label="X">X</a>
+        </div>
+      </div>
+      <div>
+        <h5>Explore</h5>
+        <ul>
+          <li><a href="#properties">Properties</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#agents">Agents</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Company</h5>
+        <ul>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Press</a></li>
+          <li><a href="#">Privacy</a></li>
+          <li><a href="#">Terms</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Newsletter</h5>
+        <p>Receive private listings and market insights.</p>
+        <form class="newsletter"
+          onsubmit="event.preventDefault(); this.querySelector('input').value=''; this.querySelector('button').textContent='Subscribed ✓'">
+          <input type="email" placeholder="Your email" required />
+          <button class="btn btn-gold btn-sm" type="submit">Subscribe</button>
+        </form>
+      </div>
+    </div>
+    <div class="footer-bottom container">
+      <span>© <span id="year"></span> Luxora Estates. All rights reserved.</span>
+      <span>Crafted with discretion.</span>
+    </div>
+  </footer>
+
+  <!-- BACK TO TOP -->
+  <button class="to-top" id="toTop" aria-label="Back to top">↑</button>
+
+  <!-- LIGHTBOX -->
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <button class="lb-close" id="lbClose" aria-label="Close">✕</button>
+    <button class="lb-nav lb-prev" id="lbPrev" aria-label="Previous">‹</button>
+    <img id="lbImg" alt="" />
+    <button class="lb-nav lb-next" id="lbNext" aria-label="Next">›</button>
+  </div>
+
+  <script src="/js/script.js" defer></script>
+</body>
+
+</html>
